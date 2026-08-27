@@ -6,7 +6,9 @@
   "searchNestedChoices": true,
   "templateFolderLauncherRow": "bottom",
   "devMode": false,
-  "templateFolderPaths": [],
+  "templateFolderPaths": [
+    "Templates"
+  ],
   "announceUpdates": "major",
   "version": "2.23.0",
   "globalVariables": {},
