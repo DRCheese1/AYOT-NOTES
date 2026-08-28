@@ -9,9 +9,9 @@ speed: 1
 max_fuel_tier: 1
 status: designing
 cost:
-  - item: "[[stone]]"
+  - item: "[[Stone]]"
     amount: 30
-  - item: "[[log]]"
+  - item: "[[Log]]"
     amount: 10
 ---
 
