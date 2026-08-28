@@ -7,6 +7,18 @@ let harvesters = harvestersInput.split(",").map(entry => {
   return { type: type.toLowerCase(), min_tier: Number(tier) };
 });
 let harvestersYaml = harvesters.map(h => `  - type: ${h.type}\n    min_tier: ${h.min_tier}`).join("\n");
+
+let provides = [];
+let keepAdding = true;
+while (keepAdding) {
+  let resource = await tp.system.prompt("Resource this tile provides? (leave blank to stop adding)");
+  if (!resource || resource.trim().length === 0) break;
+  let time = Number(await tp.system.prompt(`Base harvest time for ${resource} (seconds)?`, "1"));
+  provides.push({ resource: resource.trim(), time: time });
+}
+let providesYaml = provides.length > 0
+  ? provides.map(p => `  - resource: "[[${p.resource}]]"\n    time: ${p.time}`).join("\n")
+  : "";
 -%>
 ---
 id: <% id %>
@@ -15,6 +27,7 @@ harvested_by:
 <% harvestersYaml %>
 status: <% await tp.system.suggester(["idea", "designing", "final"], ["idea", "designing", "final"], false, "Status?") %>
 provides:
+<% providesYaml %>
 ---
 
 # <% name %>
@@ -33,5 +46,11 @@ SORT tier ASC
 
 ## Resources Provided
 
+```dataview
+TABLE p.resource as "Resource", p.time as "Base Time (s)"
+FROM ""
+WHERE file.link = this.file.link
+FLATTEN provides AS p
+```
 
 ## Notes
