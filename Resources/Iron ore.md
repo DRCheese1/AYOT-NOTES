@@ -13,7 +13,7 @@ This is a Tier `= this.tier` `= this.category` resource, currently **`= this.sta
 
 ## Description
 
-Iron ore is harvested from a 
+Iron ore is harvested from a [[Iron deposit]] using a [[Mineshaft]]. Can be smelted into [[Iron ingot]] with a [[Smeltery]].
 ## Ways to Obtain
 
 ### Crafted (Recipes)

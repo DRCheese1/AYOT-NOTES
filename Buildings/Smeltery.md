@@ -1,7 +1,7 @@
 ---
 id: smeltery
 type: building
-building_type: smeltery
+building_type: "[[Smeltery]]"
 tier: 1
 category: processing
 subcategory: refining

@@ -13,7 +13,7 @@ This is a Tier `= this.tier` `= this.category` resource, currently **`= this.sta
 
 ## Description
 
-
+An iron ingot is a refined version of [[Iron ore]] that has been smelted with a [[Smeltery]]. Used in many recipies.
 ## Ways to Obtain
 
 ### Crafted (Recipes)

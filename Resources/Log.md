@@ -13,7 +13,7 @@ This is a Tier `= this.tier` `= this.category` resource, currently **`= this.sta
 
 ## Description
 
-
+A log is a fuel and resource harvested from [[Forest]] using a [[Lumberjack]].
 ## Ways to Obtain
 
 ### Crafted (Recipes)
