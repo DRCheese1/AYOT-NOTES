@@ -1,5 +1,5 @@
 ---
-id: iron-ore
+id: iron-ingot
 tier: 1
 category: metal
 status: designing
@@ -7,7 +7,7 @@ fuel_tier:
 burn_time:
 ---
 
-# Iron ore
+# Iron ingot
 
 This is a Tier `= this.tier` `= this.category` resource, currently **`= this.status`**.
 
